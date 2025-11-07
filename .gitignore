@@ -1,2 +1,13 @@
-node_modules/
-js/
+# Archivos generados automáticamente
+/dist
+/node_modules
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de VSCode
+.vscode/
+
+# Otros
+*.log
