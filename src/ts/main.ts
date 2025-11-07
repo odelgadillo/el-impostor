@@ -1,7 +1,6 @@
 // main.ts
-
-import { personajes } from './datos';
-import { mostrarCarta } from './ui';
+import { personajes } from '../ts/datos';
+import { mostrarCarta } from '../ts/ui';
 
 interface Jugador {
     id: number;
@@ -34,4 +33,12 @@ function asignarPersonaje() {
 
     console.log("Personaje:", personajeActual, "Impostor:", jugadores[indiceImpostor].nombre);
     mostrarCarta();
+}
+
+const botonJugar = document.getElementById("btn-jugar");
+if (botonJugar){
+    botonJugar.addEventListener("click", () => {
+        // Se definen cuantos jugadores queremos, en este caso 4
+        iniciarJuego(4);
+    })
 }
