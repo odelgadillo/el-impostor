@@ -1,27 +1,19 @@
 // main.ts
 import { personajes } from './datos.js';
 import { mostrarCartas } from './ui.js';
-
-interface Jugador {
-    id: number;
-    nombre: string;
-    cartaVista: boolean;
-}
-
-let jugadores: Jugador[] = [];
-let personajesUsados: string[] = [];
-let personajeActual: string = "";
-let indiceImpostor: number = -1;
-
+let jugadores = [];
+let personajesUsados = [];
+let personajeActual = "";
+let indiceImpostor = -1;
 const botonJugar = document.getElementById("btn-jugar");
 if (botonJugar) {
     botonJugar.addEventListener("click", () => {
-        document.querySelector("div.min-h-screen")?.classList.add("hidden");
+        var _a;
+        (_a = document.querySelector("div.min-h-screen")) === null || _a === void 0 ? void 0 : _a.classList.add("hidden");
         iniciarJuego(5); // Por ahora 5 jugadores
-    })
+    });
 }
-
-function iniciarJuego(cantidad: number) {
+function iniciarJuego(cantidad) {
     jugadores = [];
     for (let i = 0; i < cantidad; i++) {
         jugadores.push({
@@ -32,31 +24,26 @@ function iniciarJuego(cantidad: number) {
     }
     asignarPersonaje();
 }
-
 function asignarPersonaje() {
     const disponibles = personajes.filter(p => !personajesUsados.includes(p));
-    if (disponibles.length === 0){
+    if (disponibles.length === 0) {
         alert("Ya se usaron todos los personajes. Iniciá un nuevo juego.");
         return;
     }
-
     personajeActual = disponibles[Math.floor(Math.random() * disponibles.length)];
     personajesUsados.push(personajeActual);
     indiceImpostor = Math.floor(Math.random() * jugadores.length);
-
     console.log("Personaje:", personajeActual, "Impostor:", jugadores[indiceImpostor].nombre);
     mostrarCartas(jugadores, personajeActual, indiceImpostor, siguientePartida, volverAlInicio);
 }
-
-function siguientePartida(){
+function siguientePartida() {
     asignarPersonaje();
 }
-
-function volverAlInicio(){
+function volverAlInicio() {
+    var _a;
     personajesUsados = [];
-    const zonaJuego = document.getElementById("zona-juego") as HTMLDivElement;
+    const zonaJuego = document.getElementById("zona-juego");
     zonaJuego.classList.add("hidden");
-    zonaJuego.innerHTML = ""; 
-
-    document.querySelector("div.min-h-screen")?.classList.remove("hidden");
+    zonaJuego.innerHTML = "";
+    (_a = document.querySelector("div.min-h-screen")) === null || _a === void 0 ? void 0 : _a.classList.remove("hidden");
 }

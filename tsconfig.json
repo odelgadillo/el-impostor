@@ -3,12 +3,11 @@
         "target": "es6",
         "lib": ["es2016", "dom"],
         "module": "es6",
-        "outDir": "./dist/js",
         "rootDir": "./src/ts",
+        "outDir": "./src/js",
         "strict": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true
-    },
-    "include": ["src/ts/**/*"]
+    }
 }
