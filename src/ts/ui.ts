@@ -38,6 +38,11 @@ export function mostrarCartas(
 
         boton.addEventListener("click", () => {
             const vista = carta.dataset.vista === "true";
+            const bloqueada = carta.dataset.bloqueada === "true";
+
+            // si ya fue bloqueada no se puede volver a abrir
+            if (bloqueada) return;
+
             if (!vista) {
                 contenido.textContent = index === indiceImpostor ? "Sos el IMPOSTOR 😈" : `Palabra: ${personaje}`;
                 contenido.classList.remove("hidden");
@@ -46,9 +51,12 @@ export function mostrarCartas(
                 carta.classList.add("border-4", "border-green-500");
             } else {
                 contenido.classList.add("hidden");
-                boton.textContent = "Ver carta";
+                boton.textContent = "Vista finalizada";
+                boton.classList.add("opacity-60", "cursor-not-allowed");
+                boton.disabled = true;
                 carta.dataset.vista = "false";
-                carta.classList.add("opacity-70");
+                carta.dataset.bloqueada = "true"; 
+                carta.classList.add("border-gray-600", "opacity-70");
             }
         });
 

@@ -18,6 +18,10 @@ export function mostrarCartas(jugadores, personaje, indiceImpostor, onSiguiente,
         boton.className = "bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded";
         boton.addEventListener("click", () => {
             const vista = carta.dataset.vista === "true";
+            const bloqueada = carta.dataset.bloqueada === "true";
+            // si ya fue bloqueada no se puede volver a abrir
+            if (bloqueada)
+                return;
             if (!vista) {
                 contenido.textContent = index === indiceImpostor ? "Sos el IMPOSTOR 😈" : `Palabra: ${personaje}`;
                 contenido.classList.remove("hidden");
@@ -27,9 +31,12 @@ export function mostrarCartas(jugadores, personaje, indiceImpostor, onSiguiente,
             }
             else {
                 contenido.classList.add("hidden");
-                boton.textContent = "Ver carta";
+                boton.textContent = "Vista finalizada";
+                boton.classList.add("opacity-60", "cursor-not-allowed");
+                boton.disabled = true;
                 carta.dataset.vista = "false";
-                carta.classList.add("opacity-70");
+                carta.dataset.bloqueada = "true";
+                carta.classList.add("border-gray-600", "opacity-70");
             }
         });
         carta.appendChild(nombre);
