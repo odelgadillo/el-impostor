@@ -16,8 +16,11 @@ let indiceImpostor: number = -1;
 const botonJugar = document.getElementById("btn-jugar");
 if (botonJugar) {
     botonJugar.addEventListener("click", () => {
+        const selector = document.getElementById("cantidad-jugadores") as HTMLSelectElement;
+        const cantidad = parseInt(selector.value);
+
         document.querySelector("div.min-h-screen")?.classList.add("hidden");
-        iniciarJuego(5); // Por ahora 5 jugadores
+        iniciarJuego(cantidad);
     })
 }
 

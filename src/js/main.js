@@ -9,8 +9,10 @@ const botonJugar = document.getElementById("btn-jugar");
 if (botonJugar) {
     botonJugar.addEventListener("click", () => {
         var _a;
+        const selector = document.getElementById("cantidad-jugadores");
+        const cantidad = parseInt(selector.value);
         (_a = document.querySelector("div.min-h-screen")) === null || _a === void 0 ? void 0 : _a.classList.add("hidden");
-        iniciarJuego(5); // Por ahora 5 jugadores
+        iniciarJuego(cantidad);
     });
 }
 function iniciarJuego(cantidad) {
