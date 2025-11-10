@@ -52,22 +52,9 @@ el-impostor/
 - Publicación gratuita usando **GitHub Pages**.
 
 
-### 🚀 Publicar o actualizar el juego
-
-1. Compilar los archivos TypeScript:
-   ```bash
-   npx tsc
-2. Confirmar que los `.js` se generaron correctamente dentro de `docs/js/.`
-3. Subir los cambios a GitHub:
-    ```bash
-    git add .
-    git commit -m "Actualizar versión del juego"
-    git push
-    ```
-4. GitHub Pages actualizará automáticamente la versión online en pocos 
-minutos.
-Tu sitio estará disponible en:
-👉 https://<tu-usuario>.github.io/el-impostor/
+### 🚀 Probar el juego
+El sitio está disponible en:
+👉 [https://odelgadillo.github.io/el-impostor/](https://odelgadillo.github.io/el-impostor/)
 
 
 ---
