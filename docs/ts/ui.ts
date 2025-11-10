@@ -25,7 +25,7 @@ export function mostrarCartas(
         nombre.className = "font-bold text-yellow-400 mb-2";
 
         const contenido = document.createElement("p");
-        contenido.className = "text-lg text-white mb-4 hidden";
+        contenido.className = "text-2xl text-white mb-4 hidden";
 
         const boton = document.createElement("button");
         boton.textContent = "Ver carta";

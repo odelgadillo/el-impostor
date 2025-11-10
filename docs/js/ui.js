@@ -14,7 +14,7 @@ export function mostrarCartas(jugadores, personaje, indiceImpostor, onSiguiente,
         nombre.textContent = jugador.nombre;
         nombre.className = "font-bold text-yellow-400 mb-2";
         const contenido = document.createElement("p");
-        contenido.className = "text-lg text-white mb-4 hidden";
+        contenido.className = "text-2xl text-white mb-4 hidden";
         const boton = document.createElement("button");
         boton.textContent = "Ver carta";
         boton.className = "bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded transition";
@@ -34,9 +34,7 @@ export function mostrarCartas(jugadores, personaje, indiceImpostor, onSiguiente,
             else {
                 carta.classList.add("cursor-not-allowed");
                 contenido.textContent = "Visto";
-                // contenido.classList.add("hidden");
                 boton.textContent = "Vista finalizada";
-                // boton.classList.add("opacity-60", "cursor-not-allowed");
                 boton.disabled = true;
                 boton.classList.add("hidden");
                 carta.dataset.vista = "false";
