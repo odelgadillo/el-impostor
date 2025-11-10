@@ -56,16 +56,18 @@
             </div>
         </div>
 
-        <div id="zona-juego" class="hidden flex flex-col items-center gap-6 mt-8">
-            <div id="carta"
-                class="bg-gray-800 text-white rounded-2xl p-10 text-2xl font-bold shadow-lg transform transition-transform duration-500">
-                <p id="texto-carta">Tu personaje es...</p>
+        <div id="zona-juego"
+            class="hidden min-h-screen flex flex-col items-center justify-center p-6 bg-gray-900 text-white">
+            <div id="cartas-contenedor"
+                class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full max-w-5xl">
+                <!-- Las cartas se crean dinámicamente -->
             </div>
-            <button id="btn-siguiente"
-                class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded transition">
-                Siguiente jugador
-            </button>
+            <div class="col-span-full flex gap-4 justify-center mt-8">
+                <button id="btn-siguiente-partida" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded transition">Siguiente partida</button>
+                <button id="btn-volver-a-jugar" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded transition">Volver al inicio</button>
+            </div>
         </div>
+
 
     </main>
     <script type="module" src="./js/main.js"></script>

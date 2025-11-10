@@ -68,7 +68,16 @@ function volverAlInicio() {
     personajesUsados = [];
     const zonaJuego = document.getElementById("zona-juego");
     zonaJuego.classList.add("hidden");
-    zonaJuego.innerHTML = "";
+    const cartasContenedor = document.getElementById("cartas-contenedor");
+    cartasContenedor.innerHTML = "";
     const bienvenida = document.getElementById("bienvenida");
     bienvenida.classList.remove("hidden");
+}
+const botonSiguientePartida = document.getElementById("btn-siguiente-partida");
+if (botonSiguientePartida) {
+    botonSiguientePartida.addEventListener("click", siguientePartida);
+}
+const botonVolverAJugar = document.getElementById("btn-volver-a-jugar");
+if (botonVolverAJugar) {
+    botonVolverAJugar.addEventListener("click", volverAlInicio);
 }
