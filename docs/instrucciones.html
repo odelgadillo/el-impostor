@@ -2,25 +2,42 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instrucciones - El Impostor</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-900 text-white font-sans p-6">
-    <h1 class="text-3xl font-bold text-yellow-400 mb-4">Instrucciones</h1>
-    <ul class="list-disc list-inside text-gray-300 space-y-2">
-        <li>El juego se juega con 3 o más jugadores.</li>
-        <li>El sistema asigna aleatoriamente un personaje a todos, y un jugador será el impostor.</li>
-        <li>Cada jugador ve su carta en el celular y no puede mostrarla a otros.</li>
-        <li>El impostor no sabe cuál es el personaje, pero los demás sí.</li>
-        <li>Se hace una ronda de descripciones. Al final, todos votan quién creen que es el impostor.</li>
-        <li>Después de la votación, se puede empezar una nueva ronda con otro personaje.</li>
-        <li>El juego continúa hasta que quieran, siempre fomentando la interacción y la diversión.</li>
-    </ul>
-    <a href="index.html"
-        class="mt-6 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition">Volver</a>
+<body class="bg-gray-900 text-white font-sans">
+    <main class="min-h-screen flex flex-col items-center justify-center px-6 py-12">
+        <div class="max-w-2xl w-full bg-gray-800/60 backdrop-blur-sm p-8 rounded-3xl shadow-lg border border-gray-700">
+            <h1 class="text-4xl font-bold text-yellow-400 text-center mb-6">
+                Cómo jugar 🎭
+            </h1>
+            <ol class="list-decimal list-inside text-gray-200 space-y-3">
+                <li>Se juega con 3 o más jugadores</li>
+                <ul class="list-disc ml-6 mt-2">
+                    <li>Tambien podes asignar nombres a cada jugador (si vos queres).</li>
+                </ul>
+                <li>Presioná <strong>“Jugar”</strong> para iniciar la partida.</li>
+                <li>Cada jugador revela <strong>una carta</strong> en su turno:
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Uno va a ser <strong>el Impostor 😈</strong>, y no conoce la palabra.</li>
+                        <li>Los demás van a ver la palabra secreta.</li>
+                    </ul>
+                </li>
+                <li>Después de ver sus cartas, empiezan la rondas de descripción para descubrir al impostor.</li>
+                <li>Al final de cada ronda todos votan quién creen que es el impostor.</li>
+            </ol>
+
+            <div class="text-center mt-10">
+                <a href="index.html"
+                    class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded transition">
+                    Volver al inicio
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
