@@ -11,7 +11,8 @@
 
 <body class="bg-gray-900 text-white font-sans">
     <main class="min-h-screen flex flex-col items-center justify-center p-6">
-        <div id="bienvenida" class="bg-gray-800/60 backdrop-blur-sm border border-gray-700 rounded-3xl shadow-lg w-full max-w-md p-8 flex flex-col items-center gap-6 text-center">
+        <div id="bienvenida"
+            class="bg-gray-800/60 backdrop-blur-sm border border-gray-700 rounded-3xl shadow-lg w-full max-w-md p-8 flex flex-col items-center gap-6 text-center animar-entrada">
 
             <h1 class="text-4xl font-bold text-yellow-400">El Impostor 🎭</h1>
             <p class="text-center max-w-xl text-gray-300">
@@ -20,31 +21,26 @@
                 diversión.
             </p>
 
-            <!-- Selector de jugadores -->
-            <div class="flex flex-col items-center gap-2">
-                <label for="cantidad-jugadores" class="text-gray-300 font-semibold">
-                    Cantidad de jugadores:
-                </label>
-                <select id="cantidad-jugadores" class="bg-gray-800 text-white rounded px-3 py-2">
-                    <option value="3">3 jugadores</option>
-                    <option value="4" selected>4 jugadores</option>
-                    <option value="5">5 jugadores</option>
-                    <option value="6">6 jugadores</option>
-                    <option value="7">7 jugadores</option>
-                </select>
-            </div>
-
-            <!-- Botón para nombres -->
-            <div class="flex flex-col items-center gap-2">
-                <button id="btn-nombres"
-                    class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded transition">
-                    Agregar nombres
-                </button>
-
+            <!-- Grupo compacto de cantidad + botón nombres -->
+            <div class="w-full flex flex-col items-center gap-3">
+                <div class="flex shadow rounded overflow-hidden border border-gray-700">
+                    <select id="cantidad-jugadores"
+                        class="bg-yellow-500 text-black px-4 py-2 text-center outline-none focus:ring-2 focus:ring-yellow-500">
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                    <button id="btn-nombres" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 transition">
+                        Jugadores
+                    </button>
+                </div>
                 <div id="contenedor-nombres" class="hidden flex flex-col gap-2 mt-3 w-full max-w-xs">
-                    <!-- Campos creados dinámicamente para establecer los nombres -->
+                    <!-- Campos generados dinámicamente -->
                 </div>
             </div>
+
 
             <!-- Botones principales -->
             <div class="flex flex-col gap-3 w-full">
