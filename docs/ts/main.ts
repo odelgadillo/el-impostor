@@ -16,7 +16,8 @@ let indiceImpostor: number = -1;
 const botonJugar = document.getElementById("btn-jugar");
 if (botonJugar) {
     botonJugar.addEventListener("click", () => {
-        document.querySelector("div.min-h-screen")?.classList.add("hidden");
+        const bienvenida = document.getElementById("bienvenida") as HTMLDivElement;
+        bienvenida.classList.add("hidden");
 
         const cantidad = parseInt(selectorCantidad.value);
         const inputs = contenedorNombres.querySelectorAll("input");
@@ -91,5 +92,6 @@ function volverAlInicio() {
     zonaJuego.classList.add("hidden");
     zonaJuego.innerHTML = "";
 
-    document.querySelector("div.min-h-screen")?.classList.remove("hidden");
+    const bienvenida = document.getElementById("bienvenida") as HTMLDivElement;
+    bienvenida.classList.remove("hidden");
 }

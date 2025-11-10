@@ -8,8 +8,8 @@ let indiceImpostor = -1;
 const botonJugar = document.getElementById("btn-jugar");
 if (botonJugar) {
     botonJugar.addEventListener("click", () => {
-        var _a;
-        (_a = document.querySelector("div.min-h-screen")) === null || _a === void 0 ? void 0 : _a.classList.add("hidden");
+        const bienvenida = document.getElementById("bienvenida");
+        bienvenida.classList.add("hidden");
         const cantidad = parseInt(selectorCantidad.value);
         const inputs = contenedorNombres.querySelectorAll("input");
         const nombres = [];
@@ -65,10 +65,10 @@ function siguientePartida() {
     asignarPersonaje();
 }
 function volverAlInicio() {
-    var _a;
     personajesUsados = [];
     const zonaJuego = document.getElementById("zona-juego");
     zonaJuego.classList.add("hidden");
     zonaJuego.innerHTML = "";
-    (_a = document.querySelector("div.min-h-screen")) === null || _a === void 0 ? void 0 : _a.classList.remove("hidden");
+    const bienvenida = document.getElementById("bienvenida");
+    bienvenida.classList.remove("hidden");
 }
