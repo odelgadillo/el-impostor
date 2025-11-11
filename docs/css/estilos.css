@@ -1,30 +1,37 @@
 /* Animación de entrada suave */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animar-entrada {
-  animation: fadeInUp 0.8s ease-out;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 @keyframes aparecerCarta {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .animar-carta {
-  animation: aparecerCarta 0.4s ease-out;
+    animation: aparecerCarta 0.4s ease-out;
+}
+
+
+div[id^="cartas-contenedor"] div>div.h-full.bg-yellow-400 {
+    transition: width 0.08s linear;
 }
