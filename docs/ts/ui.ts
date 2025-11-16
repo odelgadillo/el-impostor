@@ -58,7 +58,7 @@ export function mostrarCartas(
             if (bloqueada) return;
 
             if (!vista) {
-                contenido.textContent = index === indiceImpostor ? "Sos el IMPOSTOR 😈" : `${personaje}`;
+                contenido.textContent = index === indiceImpostor ? "IMPOSTOR 😈" : `${personaje}`;
                 contenido.classList.remove("hidden");
                 boton.textContent = "Ocultar carta";
                 boton.classList.add("hidden");

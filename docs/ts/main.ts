@@ -1,5 +1,5 @@
 // main.ts
-import { personajes } from './datos.js';
+import { bancos, ModoJuego } from './datos.js';
 import { mostrarCartas } from './ui.js';
 
 interface Jugador {
@@ -12,6 +12,8 @@ let jugadores: Jugador[] = [];
 let personajesUsados: string[] = [];
 let personajeActual: string = "";
 let indiceImpostor: number = -1;
+let modoActual: ModoJuego = (localStorage.getItem("modo-impostor") as ModoJuego) || "general";
+
 
 const botonJugar = document.getElementById("btn-jugar");
 if (botonJugar) {
@@ -68,7 +70,14 @@ function iniciarJuego(cantidad: number, nombres?: string[]) {
 }
 
 function asignarPersonaje() {
-    const disponibles = personajes.filter(p => !personajesUsados.includes(p));
+    const lista = bancos[modoActual];
+
+    if (!lista || lista.length === 0) {
+        alert("El banco de palabras está vacío.");
+        return;
+    }
+
+    const disponibles = lista.filter(p => !personajesUsados.includes(p));
     if (disponibles.length === 0) {
         alert("Ya se usaron todos los personajes. Iniciá un nuevo juego.");
         return;

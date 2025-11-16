@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración — El Impostor</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-6">
+
+        <div
+            class="bg-gray-800/60 backdrop-blur-sm border border-gray-700 rounded-3xl shadow-lg w-full max-w-md p-8 flex flex-col gap-6">
+
+            <h1 class="text-3xl font-bold text-yellow-400 text-center">
+                Configuración ⚙️
+            </h1>
+
+            <!-- Selección del modo -->
+            <div class="flex flex-col gap-2">
+                <label class="text-gray-300 font-semibold">Modo de juego:</label>
+
+                <select id="modo-juego"
+                    class="bg-gray-700 text-white rounded px-4 py-2 outline-none focus:ring-2 focus:ring-yellow-500">
+                    <option value="general">General</option>
+                    <option value="cristiano">Cristiano</option>
+                    <option value="santacruz">Santa Cruz</option>
+                </select>
+            </div>
+
+            <!-- Botones -->
+            <div class="flex flex-col gap-3 mt-4">
+                <button id="btn-guardar"
+                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded transition">
+                    Guardar
+                </button>
+
+                <a href="index.html"
+                    class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded text-center transition">
+                    Volver
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="./js/configuracion.js"></script>
+</body>
+
+</html>
