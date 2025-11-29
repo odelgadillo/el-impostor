@@ -21,5 +21,12 @@ export const bancos = {
         "Blooming 💙", "Paceña 🍺", "El Chiriguano", "La Plaza 24 de Septiembre",
         "Vinchita", "Pampeño", "Mayte (beishu 💋)", "Bianca Flor 🧁",
         "Coca 🍃", "Maguerita 🤡"
+    ],
+    futbol: [
+        "Messi", "Cristiano", "Echeverry",
+        "Boca Jr. 💙💛", "Barcelona 💜", "Real Madrid 🤍", "Tarjeta Roja 🔴",
+        "Blooming 💙", "Paceña 🍺", "El Chiriguano", "La Plaza 24 de Septiembre",
+        "Vinchita", "Pampeño", "Mayte (beishu 💋)", "Bianca Flor 🧁",
+        "Coca 🍃", "Maguerita 🤡"
     ]
 };
