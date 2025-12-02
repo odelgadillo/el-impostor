@@ -15,12 +15,12 @@ export const bancos = {
         "Los Diez Mandamientos", "Job", "Judas", "Evangelios",
         "Apocalipsis", "Genesis", "Sansón", "Iglesia ⛪"
     ],
-    santacruz: [
+    santaCruz: [
         "El Cambódromo", "La Feria Exposición", "El Cristo Redentor",
         "Mamen", "Jhonny F. (tongo)", "Oriente Petrolero 💚", "Percy",
         "Blooming 💙", "Paceña 🍺", "El Chiriguano", "La Plaza 24 de Septiembre",
-        "Vinchita", "Pampeño", "Mayte (beishu 💋)", "Bianca Flor 🧁",
-        "Coca 🍃", "Maguerita 🤡"
+        "Vinchita 🧟‍♂️", "Pampeño 🍗", "Mayte (beishu 💋)", "Bianca Flor 🧁",
+        "Coca 🍃", "Maguerita 🤡",
     ],
     futbol: [
         "Messi", "Cristiano", "Echeverry",
